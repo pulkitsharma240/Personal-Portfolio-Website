@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulkit Sharma | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Canvas for Three.js background -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+    
+    <!-- Header and Navigation -->
+    <header class="fixed top-0 left-0 w-full py-4 px-6 bg-opacity-80 backdrop-filter backdrop-blur-md z-50 bg-gray-900">
+        <div class="container mx-auto">
+            <nav class="flex justify-between items-center">
+                <div class="logo-container flex items-center">
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                    <div class="logo-text">PS</div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="#education" class="nav-link text-gray-300 hover:text-white">Education</a>
+                    <a href="#certifications" class="nav-link text-gray-300 hover:text-white">Certifications</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden hamburger cursor-pointer" id="menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+                
+                <!-- Mobile menu -->
+                <div class="nav-menu md:hidden flex items-center space-y-8" id="mobile-menu">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a>
+                    <a href="#education" class="nav-link text-gray-300 hover:text-white">Education</a>
+                    <a href="#certifications" class="nav-link text-gray-300 hover:text-white">Certifications</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="section min-h-screen flex items-center pt-20">
+        <div class="container mx-auto">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <h1 class="text-6xl md:text-8xl font-bold mb-4">Hi, I'm <span class="text-purple-500">Pulkit Sharma</span></h1>
+                    <p class="text-2xl text-gray-300 mb-6">Master’s Student in Computer Applications</p>
+                    <p class="text-gray-400 mb-8 max-w-lg text-lg md:text-xl">A dedicated and skilled programmer with expertise in Artificial Intelligence, Machine Learning, Python, Java and Data Structures. Passionate about solving complex problems and creating efficient solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="download-btn inline-block">Contact Me</a>
+                        <a href="assets/resume/Pulkit_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onclick="window.open(this.href, '_blank'); return false;"class="download-btn inline-block bg-transparent border-2 border-purple-600 hover:bg-purple-600 transition-all">
+                            Download Resume <i class="fas fa-download ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="hero-gradient p-2 rounded-full">
+                        <img src="assets/images/profile.JPG" alt="Pulkit Sharma" class="profile-img rounded-full w-96 h-96 object-cover object-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section bg-gray-900 bg-opacity-60">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Professional Profile</h3>
+                    <p class="text-gray-300 mb-6">
+                        I am currently pursuing a Master’s in Computer Applications and hold a Bachelor's degree from Manipal University Jaipur with a CGPA of 8.84. My undergraduate education, combined with personal projects, has equipped me with a strong foundation in Artificial Intelligence, Machine Learning, Python Programming, Java Programming, Database Management, and Data Structures, which I continue to build upon through advanced coursework and practical experience.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        My focus areas include Artificial Intelligence, Machine Learning, Data Structures and Algorithms, and developing efficient solutions for real-world problems. I'm passionate about continuous learning and applying my skills to create innovative applications.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <div class="px-4 py-2 bg-purple-900 bg-opacity-50 rounded-full text-sm">Artificial Intelligence Enthusaist</div>
+                        <div class="px-4 py-2 bg-purple-900 bg-opacity-50 rounded-full text-sm">Machine Learning Developer</div>
+                        <div class="px-4 py-2 bg-purple-900 bg-opacity-50 rounded-full text-sm">Problem Solver</div>
+                        <div class="px-4 py-2 bg-purple-900 bg-opacity-50 rounded-full text-sm">Coding Enthusiast</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Personal Interests</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-purple-600 p-2 rounded-lg">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Data Structures & Algorithms</h4>
+                                <p class="text-gray-400">Enthusiastic about solving complex algorithmic problems and optimizing solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-purple-600 p-2 rounded-lg">
+                                <i class="fas fa-calculator text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Mathematics</h4>
+                                <p class="text-gray-400">Passionate about applying analytical and quantitative skills to solve real-world problems.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-purple-600 p-2 rounded-lg">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Community Service</h4>
+                                <p class="text-gray-400">Active participant in The Bharat Scouts & Guides, achieving Rajyapuruskar recognition.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-purple-600 p-2 rounded-lg">
+                                <i class="fas fa-flask text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Experimental Physics</h4>
+                                <p class="text-gray-400">Completed workshops in Experimental Physics and Vedic Mathematics at ALLEN Career Institute.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="mailto:pulkitsharma2823@gmail.com" class="text-purple-400 hover:text-purple-300 transition-colors">
+                            <i class="far fa-envelope text-xl"></i>
+                        </a>
+                        <a href="tel:+919667016387" class="text-purple-400 hover:text-purple-300 transition-colors">
+                            <i class="fas fa-phone text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pulkit-sharma-970a38354" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/pulkitsharma240" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                <!-- Python Programming -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fab fa-java text-purple-500 mr-3 text-2xl"></i>
+                            Python Programming
+                        </h3>
+                        <span class="text-gray-400">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Python Libraries, Programming Fundamentals, Data Structures</p>
+                </div>
+                <!-- Artificial Intelligence -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fab fa-java text-purple-500 mr-3 text-2xl"></i>
+                            Artificial Intelligence
+                        </h3>
+                        <span class="text-gray-400">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Large Language Models, Neural Networks, Natural Language Processing</p>
+                </div>
+                <!-- Machine Learning -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fab fa-java text-purple-500 mr-3 text-2xl"></i>
+                            Machine Learning
+                        </h3>
+                        <span class="text-gray-400">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Supervised Learning, Unsupervised Learning, Reinforcement Learning, Libraries(Scikit-learn, Pandas, NumPy)</p>
+                </div>
+                <!-- Java Programming -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fab fa-java text-purple-500 mr-3 text-2xl"></i>
+                            Java Programming
+                        </h3>
+                        <span class="text-gray-400">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Core Java, Java Collections, Multithreading, JDBC</p>
+                </div>
+                
+                <!-- Object Oriented Programming -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fas fa-cubes text-purple-500 mr-3 text-2xl"></i>
+                            Object Oriented Programming
+                        </h3>
+                        <span class="text-gray-400">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Abstraction, Encapsulation, Inheritance, Polymorphism</p>
+                </div>
+                
+                <!-- DBMS -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fas fa-database text-purple-500 mr-3 text-2xl"></i>
+                            Database Management
+                        </h3>
+                        <span class="text-gray-400">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">SQL, MySQL, Database Design, Normalization</p>
+                </div>
+                
+                <!-- HTML and CSS -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fas fa-code text-purple-500 mr-3 text-2xl"></i>
+                            HTML, CSS & Bootstrap
+                        </h3>
+                        <span class="text-gray-400">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">HTML5, CSS3, Responsive Design, Flexbox, Bootstrap</p>
+                </div>
+                
+                <!-- Data Structures and Algorithms -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fas fa-project-diagram text-purple-500 mr-3 text-2xl"></i>
+                            Data Structures & Algorithms
+                        </h3>
+                        <span class="text-gray-400">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Arrays, Linked Lists, Trees, Graphs, Sorting Algorithms</p>
+                </div>
+                
+                <!-- JavaScript -->
+                <div class="skill-item">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-medium flex items-center">
+                            <i class="fab fa-js-square text-purple-500 mr-3 text-2xl"></i>
+                            JavaScript
+                        </h3>
+                        <span class="text-gray-400">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">ES6+, DOM Manipulation, Event Handling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-gray-900 bg-opacity-60">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                 <div class="project-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Personal Portfolio Website</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Designed and developed a personal portfolio website to showcase projects, skills, and experiences. Implemented a modern, minimalist UI for optimal user experience. Utilized HTML5 and CSS3 for front-end development.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">HTML5</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">CSS3</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">JavaScript</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">Responsive Design</span>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="https://github.com/pulkitsharma240/Personal-Portfolio-Website.git" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-music text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Spotify Clone – Frontend</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Developed a responsive Spotify-inspired frontend interface replicating core UI components such as sidebar navigation, playlists, trending sections, and a sticky music player. Focused on clean UI design and smooth user interactions using modern CSS techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">HTML5</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">CSS3</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">Flexbox</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">CSS Animations</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">Responsive Design</span>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="https://github.com/pulkitsharma240/spotify-web-ui-clone-html-css.git" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-university text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Bank Management System</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Developed a comprehensive Bank Management System using Java, providing efficient account management and transaction processing. Implemented features such as user authentication, balance inquiries, fund transfers, and transaction histories. Utilized Java Swing for the user interface and MySQL for data storage, ensuring a secure and scalable solution.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">Java</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">Java Swing</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">MySQL</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-xs">JDBC</span>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="#" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">Education</h2>
+            <div class="space-y-12 max-w-3xl mx-auto">
+                <!-- Manipal University -->
+                <div class="timeline-item">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex justify-between flex-wrap">
+                            <h3 class="text-2xl font-bold text-purple-400">Manipal University Jaipur</h3>
+                            <span class="text-gray-400">November 2024 - Present</span>
+                        </div>
+                        <p class="text-lg font-medium mt-2">Master of Computer Applications</p>
+                        <div class="mt-4 bg-purple-900 bg-opacity-20 px-4 py-2 rounded-md inline-block">
+                            <span class="font-semibold">CGPA: 9.0</span>
+                        </div>
+                        <p class="mt-4 text-gray-300">
+                            Pursuing a Master’s degree in Computer Applications with a strong academic background in artificial intelligence, machine learning, programming, database management, and software development. Building upon a solid foundation in computer science concepts and practical programming skills acquired during undergraduate studies to gain advanced knowledge and specialized expertise in the field.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Artificial Intelligence</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Machine Learning</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Python Programming</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Data Structures</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Database Systems</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Manipal University -->
+                <div class="timeline-item">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex justify-between flex-wrap">
+                            <h3 class="text-2xl font-bold text-purple-400">Manipal University Jaipur</h3>
+                            <span class="text-gray-400">October 2021 - 2024</span>
+                        </div>
+                        <p class="text-lg font-medium mt-2">Bachelor of Computer Applications</p>
+                        <div class="mt-4 bg-purple-900 bg-opacity-20 px-4 py-2 rounded-md inline-block">
+                            <span class="font-semibold">CGPA: 8.84</span>
+                        </div>
+                        <p class="mt-4 text-gray-300">
+                            Completed Bachelor's degree in Computer Applications with a strong focus on programming, database management, software development, and computer networks. Developed a solid foundation in computer science concepts and practical programming skills.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Java Programming</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Data Structures</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Database Systems</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Web Development</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Computer Networks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kendriya Vidyalaya No 5 (XII) -->
+                <div class="timeline-item">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex justify-between flex-wrap">
+                            <h3 class="text-2xl font-bold text-purple-400">Kendriya Vidyalaya No 5</h3>
+                            <span class="text-gray-400">April 2020 - 2021</span>
+                        </div>
+                        <p class="text-lg font-medium mt-2">Senior Secondary (XII), Science</p>
+                        <div class="mt-4 bg-purple-900 bg-opacity-20 px-4 py-2 rounded-md inline-block">
+                            <span class="font-semibold">Percentage: 79.2%</span>
+                        </div>
+                        <p class="mt-4 text-gray-300">
+                            Completed senior secondary education with Science stream, focusing on Physics, Chemistry, and Biology. Developed strong analytical and problem-solving skills through rigorous coursework.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Physics</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Chemistry</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">Biology</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kendriya Vidyalaya No 5 (X) -->
+                <div class="timeline-item">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex justify-between flex-wrap">
+                            <h3 class="text-2xl font-bold text-purple-400">Kendriya Vidyalaya No 5</h3>
+                            <span class="text-gray-400">April 2018 - 2019</span>
+                        </div>
+                        <p class="text-lg font-medium mt-2">Secondary (X), CBSE</p>
+                        <div class="mt-4 bg-purple-900 bg-opacity-20 px-4 py-2 rounded-md inline-block">
+                            <span class="font-semibold">Percentage: 72.8%</span>
+                        </div>
+                        <p class="mt-4 text-gray-300">
+                            Completed secondary education with a well-rounded curriculum including Mathematics, Science, Social Studies, English, and Hindi. Built a strong academic foundation and developed critical thinking skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-gray-900 bg-opacity-60">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification 1 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-certificate text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Core Java Specialization</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Comprehensive specialization covering Java fundamentals, object-oriented programming, data structures, and advanced Java concepts. Learned best practices for Java development and gained hands-on experience through practical assignments.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: LearnQuest</p>
+                    <div class="mt-auto">
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/PYUQLLNQU76M?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-sitemap text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Structures and Algorithms using Java</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Mastered essential data structures (arrays, linked lists, stacks, queues, trees, graphs) and algorithms (sorting, searching, recursion) using Java. Developed skills to analyze algorithm efficiency and apply appropriate data structures to solve programming challenges.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: IIT Kharagpur (NPTEL)</p>
+                    <div class="mt-auto">
+                        <a href="https://drive.google.com/file/d/1EdGjBGVcG4HapFaQeaxeNFpbcmvFNubI/view?usp=sharing" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Programming Fundamentals</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Comprehensive course covering core programming concepts including variables, control structures, loops, functions, and object-oriented programming principles. Developed problem-solving skills and learned to design algorithms for effective software solutions.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: Duke University</p>
+                    <div class="mt-auto">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/SD9GEXRJ66NF?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 4 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-briefcase text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">McKinsey Forward Program</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Completed McKinsey’s Forward Program focusing on problem-solving, structured thinking, digital collaboration, and adaptability. Gained exposure to real-world business challenges and professional skill development.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: McKinsey.org | 2025</p>
+                    <div class="mt-auto">
+                        <a href="https://www.credly.com/badges/2c3427c5-0b15-4a89-9211-ceed9447467f/linked_in_profile" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 5 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-robot text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Generative AI Professional</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Learned fundamentals of Generative AI, large language models, prompt engineering, and AI use cases using Oracle Cloud Infrastructure. Developed understanding of deploying AI-driven solutions in real-world scenarios.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: Oracle Cloud Infrastructure | 2025</p>
+                    <div class="mt-auto">
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=DC2B7F8804B4AEDCC1B37AA506D2E85F5BB4B09C78BA279592E68C044FCACA64" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification 6 -->
+                <div class="cert-card p-6 h-full flex flex-col">
+                    <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg inline-block mb-4">
+                        <i class="fas fa-chart-line text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Foundations of Digital Marketing & E-commerce</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">
+                        Gained foundational knowledge of digital marketing strategies, SEO, social media marketing, customer engagement, and e-commerce fundamentals. Learned how businesses build and scale online presence.
+                    </p>
+                    <p class="text-gray-400 mb-4">Issued by: Google (Coursera) | 2025</p>
+                    <div class="mt-auto">
+                        <a href="https://coursera.org/share/f784eb1609541f45d8f8e35c65fa7973" target="_blank" class="cert-link font-medium inline-flex items-center">
+                            View Certificate <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">Awards & Achievements</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg mr-4">
+                            <i class="fas fa-trophy text-3xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">RAJYAPURUSKAR (THE BHARAT Scouts & Guides)</h3>
+                            <p class="text-gray-300">
+                                Received this prestigious recognition which involves a combination of activities, community service, leadership, and proficiency in various scouting skills. It signifies a high level of commitment, accomplishment, and character development within the scouting movement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="flex items-start">
+                        <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg mr-4">
+                            <i class="fas fa-atom text-3xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Vedic Maths & Experimental Physics Workshop</h3>
+                            <p class="text-gray-300">
+                                Successfully completed workshops in Vedic Mathematics and Experimental Physics at ALLEN Career Institute Jaipur Center, demonstrating commitment to enhancing mathematical and scientific knowledge beyond the standard curriculum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-900 bg-opacity-60">
+        <div class="container mx-auto">
+            <h2 class="section-heading text-3xl font-bold text-center">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-purple-400">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:pulkitsharma2823@gmail.com" class="text-gray-300 hover:text-purple-400 transition-colors">pulkitsharma2823@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <a href="tel:+919667016387" class="text-gray-300 hover:text-purple-400 transition-colors">+91 9667016387</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-900 bg-opacity-30 p-3 rounded-lg mr-4">
+                                <i class="fab fa-linkedin text-xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/pulkit-sharma-970a38354" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors">linkedin.com/in/pulkit-sharma-970a38354</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-xl font-semibold mb-6 text-purple-400">Send a Message</h3>
+                        <form class="space-y-6" id="contact-form">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Name</label>
+                                <input type="text" id="name" class="form-input w-full px-4 py-2 rounded-lg" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email</label>
+                                <input type="email" id="email" class="form-input w-full px-4 py-2 rounded-lg" placeholder="Your email">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Message</label>
+                                <textarea id="message" rows="4" class="form-input w-full px-4 py-2 rounded-lg" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="download-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <div class="w-full max-w-md">
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                            <div class="text-center mb-6">
+                                <div class="mx-auto w-24 h-24 flex items-center justify-center bg-purple-900 bg-opacity-30 rounded-full mb-4">
+                                    <i class="fas fa-user-tie text-4xl text-purple-400"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">Pulkit Sharma</h3>
+                                <p class="text-gray-400">Master’s Student in Computer Applications</p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Location:</span>
+                                    <span class="text-gray-300">Jaipur, Rajasthan</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Experience:</span>
+                                    <span class="text-gray-300">Recent Graduate</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Availability:</span>
+                                    <span class="text-green-400">Available for hire</span>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-center">
+                                <a href="assets/resume/Pulkit_Resume.pdf" id="download-resume-card" class="download-btn flex items-center">
+                                    <i class="fas fa-download mr-2"></i> Download Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="logo-container flex items-center">
+                        <div class="logo-circle"></div>
+                        <div class="logo-circle"></div>
+                        <div class="logo-circle"></div>
+                        <div class="logo-text">PS</div>
+                    </div>
+                </div>
+                <div class="flex space-x-8 mb-6 md:mb-0">
+                    <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:pulkitsharma2823@gmail.com" class="social-icon text-gray-300 hover:text-white">
+                        <i class="far fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pulkit-sharma-970a38354" target="_blank" class="social-icon text-gray-300 hover:text-white">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/pulkitsharma240" target="_blank" class="social-icon text-gray-300 hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="tel:+919667016387" class="social-icon text-gray-300 hover:text-white">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Pulkit Sharma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
